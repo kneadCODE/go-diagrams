@@ -141,3 +141,8 @@ func (c *networkContainer) ReservedIpAddressesClassic(opts ...diagram.NodeOption
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/network/reserved-ip-addresses-classic.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
+
+func (c *networkContainer) Subnets(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/network/subnets.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
