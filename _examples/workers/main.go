@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/blushft/go-diagrams/diagram"
-	"github.com/blushft/go-diagrams/nodes/gcp"
+	"github.com/kneadCODE/go-diagrams/diagram"
+	"github.com/kneadCODE/go-diagrams/nodes/gcp"
 )
 
 func main() {

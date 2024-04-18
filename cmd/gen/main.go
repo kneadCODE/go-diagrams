@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	diaPkg = "github.com/blushft/go-diagrams/diagram"
+	diaPkg = "github.com/kneadCODE/go-diagrams/diagram"
 )
 
 type provider struct {
@@ -66,7 +66,7 @@ func loadProviders(root string) (map[string]*provider, error) {
 	providers := map[string]*provider{}
 	provDirs := map[string]string{}
 
-	//var current *provider
+	// var current *provider
 	if err := filepath.Walk(root, func(p string, info os.FileInfo, ferr error) error {
 		if info.IsDir() {
 			dir, prov := filepath.Split(p)

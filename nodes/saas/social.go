@@ -1,6 +1,6 @@
 package saas
 
-import "github.com/blushft/go-diagrams/diagram"
+import "github.com/kneadCODE/go-diagrams/diagram"
 
 type socialContainer struct {
 	path string
