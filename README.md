@@ -88,7 +88,7 @@ dot -Tpng diagram.dot > diagram.png
 
 ### Prerequisites
 
-- Go 1.18 or later (for generics support)
+- Go 1.22 or later
 - [Task](https://taskfile.dev/) (optional, for running automation tasks)
 - Graphviz (for rendering diagrams)
 
