@@ -31,3 +31,8 @@ func (c *securityContainer) DefenderForCloud(opts ...diagram.NodeOption) *diagra
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/security/defender-for-cloud.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
+
+func (c *securityContainer) WAF(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/security/waf.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
