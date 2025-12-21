@@ -127,6 +127,11 @@ func (c *networkContainer) Firewall(opts ...diagram.NodeOption) *diagram.Node {
 	return diagram.NewNode(nopts...)
 }
 
+func (c *networkContainer) FirewallPolicy(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/network/firewall-policy.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *networkContainer) LocalNetworkGateways(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/network/local-network-gateways.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
