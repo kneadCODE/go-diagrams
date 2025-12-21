@@ -156,3 +156,18 @@ func (c *networkContainer) Bastion(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/network/bastion.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
+
+func (c *networkContainer) PrivateLink(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/network/private-link.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *networkContainer) PrivateLinkService(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/network/private-link-service.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *networkContainer) PrivateEndpoint(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/network/private-endpiont.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
