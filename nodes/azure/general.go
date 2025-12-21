@@ -141,3 +141,8 @@ func (c *generalContainer) Tag(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/general/tag.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
+
+func (c *generalContainer) Policy(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/general/policy.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
