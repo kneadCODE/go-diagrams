@@ -76,3 +76,8 @@ func (c *identityContainer) EnterpriseApplications(opts ...diagram.NodeOption) *
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/identity/enterprise-applications.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
+
+func (c *identityContainer) EntraPrivateAccess(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/identity/entra-private-access.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
