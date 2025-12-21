@@ -151,3 +151,8 @@ func (c *networkContainer) Subnets(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/network/subnets.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
+
+func (c *networkContainer) Bastion(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/network/bastion.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
