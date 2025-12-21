@@ -146,3 +146,13 @@ func (c *generalContainer) Policy(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/general/policy.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
+
+func (c *generalContainer) CostManagement(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/general/cost-management.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *generalContainer) CostAlerts(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/general/cost-alerts.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
