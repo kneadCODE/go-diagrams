@@ -83,3 +83,70 @@ Create an ouput image with any graphviz compatible renderer:
 ```sh
 dot -Tpng diagram.dot > diagram.png
 ```
+
+## Development
+
+### Prerequisites
+
+- Go 1.18 or later (for generics support)
+- [Task](https://taskfile.dev/) (optional, for running automation tasks)
+- Graphviz (for rendering diagrams)
+
+### Asset Embedding
+
+This project uses [fileb0x](https://github.com/UnnoTed/fileb0x) to embed PNG icon assets as binary data in Go source files. When you update PNG files in `nodes/assets/`, you need to regenerate the embedded Go files.
+
+### Regenerating Embedded Assets
+
+After updating any PNG files in the `nodes/assets/` directory:
+
+#### Using Taskfile (Recommended)
+
+```sh
+task generate
+```
+
+This will regenerate all embedded asset files (`b0xfile_*.go`) in the `nodes/assets/` directory.
+
+#### Manual Approach
+
+```sh
+cd nodes/assets
+go generate
+```
+
+**Note:** The `go generate` command will update all `b0xfile_*.go` files (1100+ files). If you only changed one asset, you can use:
+
+```sh
+task generate:only-storage
+```
+
+This task regenerates all assets but only commits the storage account changes, restoring all other files to their previous state.
+
+### Available Tasks
+
+Run `task help` or `task --list` to see all available tasks:
+
+- `generate` - Regenerate embedded asset files from source PNGs
+- `generate:only-storage` - Regenerate only Azure storage account asset (for testing)
+- `test` - Run tests
+- `lint` - Run linter
+- `clean` - Clean generated files
+
+### Building
+
+```sh
+go build ./...
+```
+
+### Testing
+
+```sh
+go test ./...
+```
+
+Or using Task:
+
+```sh
+task test
+```

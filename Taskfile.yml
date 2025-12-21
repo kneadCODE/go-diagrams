@@ -1,0 +1,23 @@
+version: "3"
+
+tasks:
+  generate:
+    desc: Regenerate embedded asset files from source PNGs
+    dir: nodes/assets
+    cmds:
+      - go generate
+
+  test:
+    desc: Run tests
+    cmds:
+      - go test ./...
+
+  clean:
+    desc: Clean generated files
+    cmds:
+      - rm -rf nodes/assets/b0xfile_*.go nodes/assets/b0x.go
+
+  help:
+    desc: Show available tasks
+    cmds:
+      - task --list
