@@ -188,7 +188,7 @@ func (c *networkContainer) PrivateLinkService(opts ...diagram.NodeOption) *diagr
 }
 
 func (c *networkContainer) PrivateEndpoint(opts ...diagram.NodeOption) *diagram.Node {
-	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/network/private-endpiont.png")}, c.opts, opts)
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/network/private-endpoint.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
 
