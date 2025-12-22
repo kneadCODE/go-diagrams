@@ -61,3 +61,8 @@ func (c *webContainer) MediaServices(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/web/media-services.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
+
+func (c *webContainer) StaticApps(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/web/static-apps.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
