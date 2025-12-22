@@ -72,6 +72,11 @@ func (c *computeContainer) KubernetesServices(opts ...diagram.NodeOption) *diagr
 	return diagram.NewNode(nopts...)
 }
 
+func (c *computeContainer) KubernetesFleetManager(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/kubernetes-fleet-manager.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *computeContainer) ServiceFabricClusters(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/service-fabric-clusters.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
