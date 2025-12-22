@@ -7,6 +7,12 @@ tasks:
     cmds:
       - go generate
 
+  generate:azure:
+    desc: Regenerate only Azure embedded asset files
+    dir: nodes/assets
+    cmds:
+      - go run github.com/UnnoTed/fileb0x ./b0x-azure.yml
+
   test:
     desc: Run tests
     cmds:

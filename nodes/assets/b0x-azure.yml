@@ -1,0 +1,12 @@
+pkg: assets
+dest: ./
+fmt: true
+compression:
+  compress: true
+clean: false
+noprefix: true
+spread: true
+custom:
+  - files:
+      - ../../assets/azure/**/*.png
+    base: ../../
