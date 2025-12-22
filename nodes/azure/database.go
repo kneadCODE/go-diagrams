@@ -96,3 +96,18 @@ func (c *databaseContainer) SqlServerStretchDatabases(opts ...diagram.NodeOption
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/database/sql-server-stretch-databases.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
+
+func (c *databaseContainer) CosmosDBForAzurePostgreSQLCluster(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/database/cosmosdb-for-postgresql-cluster.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *databaseContainer) ManagedCassandra(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/database/managed-cassandra.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *databaseContainer) ManagedRedis(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/database/managed-redis.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
