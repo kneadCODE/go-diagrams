@@ -91,3 +91,8 @@ func (c *storageContainer) StorsimpleDataManagers(opts ...diagram.NodeOption) *d
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/storage/storsimple-data-managers.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
+
+func (c *storageContainer) RecoveryServicesVault(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/storage/recovery-services-vault.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
