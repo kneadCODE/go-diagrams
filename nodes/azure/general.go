@@ -156,3 +156,28 @@ func (c *generalContainer) CostAlerts(opts ...diagram.NodeOption) *diagram.Node 
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/general/cost-alerts.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
+
+func (c *generalContainer) CostBudgets(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/general/cost-budgets.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *generalContainer) CostManagementBilling(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/general/cost-management-billing.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *generalContainer) Dashboard(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/general/dashboard.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *generalContainer) Advisor(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/general/advisor.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *generalContainer) Monitor(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/general/monitor.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
