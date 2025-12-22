@@ -81,3 +81,68 @@ func (c *identityContainer) EntraPrivateAccess(opts ...diagram.NodeOption) *diag
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/identity/entra-private-access.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
+
+func (c *identityContainer) EntraConnectSync(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/identity/entra-connect-sync.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *identityContainer) EntraInternetAccess(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/identity/entra-internet-access.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *identityContainer) EntraGlobalSecureAccess(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/identity/entra-global-secure-access.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *identityContainer) EntraIdentityLicenses(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/identity/entra-identity-licenses.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *identityContainer) EntraDomainServices(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/identity/entra-domain-services.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *identityContainer) EntraConnectHealth(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/identity/entra-connect-health.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *identityContainer) EntraIDProtection(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/identity/entra-id-protection.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *identityContainer) EntraPrivilegedIdentityManagement(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/identity/entra-privileged-identity-management.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *identityContainer) MultiFactorAuthentication(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/identity/multi-factor-authentication.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *identityContainer) ExternalIdentities(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/identity/external-identities.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *identityContainer) Groups(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/identity/groups.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *identityContainer) Users(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/identity/users.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *identityContainer) AdministrativeUnits(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/identity/administrative-units.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
