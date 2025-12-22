@@ -66,3 +66,8 @@ func (c *analyticsContainer) EventHubs(opts ...diagram.NodeOption) *diagram.Node
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/analytics/event-hubs.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
+
+func (c *analyticsContainer) SynapseAnalytics(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/analytics/synapse-analytics.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
