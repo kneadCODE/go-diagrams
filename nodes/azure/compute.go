@@ -42,6 +42,16 @@ func (c *computeContainer) ContainerInstances(opts ...diagram.NodeOption) *diagr
 	return diagram.NewNode(nopts...)
 }
 
+func (c *computeContainer) ContainerApps(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/container-apps.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *computeContainer) ContainerAppsEnvironments(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/container-apps-envs.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *computeContainer) ContainerRegistries(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/container-registries.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -114,5 +124,10 @@ func (c *computeContainer) CloudsimpleVirtualMachines(opts ...diagram.NodeOption
 
 func (c *computeContainer) VmWindows(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/vm-windows.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *computeContainer) SharedImageGallery(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/compute/shared-image-gallery.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
