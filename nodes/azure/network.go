@@ -67,6 +67,11 @@ func (c *networkContainer) DnsZones(opts ...diagram.NodeOption) *diagram.Node {
 	return diagram.NewNode(nopts...)
 }
 
+func (c *networkContainer) DnsPrivateResolver(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/network/dns-private-resolver.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *networkContainer) NetworkSecurityGroupsClassic(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/network/network-security-groups-classic.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -78,6 +83,11 @@ func (c *networkContainer) OnPremisesDataGateways(opts ...diagram.NodeOption) *d
 }
 
 func (c *networkContainer) VirtualNetworks(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/network/virtual-networks.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *networkContainer) VirtualNetworkManager(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/network/virtual-networks.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
@@ -132,6 +142,11 @@ func (c *networkContainer) FirewallPolicy(opts ...diagram.NodeOption) *diagram.N
 	return diagram.NewNode(nopts...)
 }
 
+func (c *networkContainer) FirewallManager(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/network/firewall-manager.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *networkContainer) LocalNetworkGateways(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/network/local-network-gateways.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
@@ -169,5 +184,10 @@ func (c *networkContainer) PrivateLinkService(opts ...diagram.NodeOption) *diagr
 
 func (c *networkContainer) PrivateEndpoint(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/network/private-endpiont.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
+func (c *networkContainer) NATGateway(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/network/nat-gateways.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
 }
