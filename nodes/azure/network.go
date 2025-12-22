@@ -77,6 +77,11 @@ func (c *networkContainer) NetworkSecurityGroupsClassic(opts ...diagram.NodeOpti
 	return diagram.NewNode(nopts...)
 }
 
+func (c *networkContainer) NetworkSecurityGroups(opts ...diagram.NodeOption) *diagram.Node {
+	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/network/network-security-groups.png")}, c.opts, opts)
+	return diagram.NewNode(nopts...)
+}
+
 func (c *networkContainer) OnPremisesDataGateways(opts ...diagram.NodeOption) *diagram.Node {
 	nopts := diagram.MergeOptionSets(diagram.OptionSet{diagram.Icon("assets/azure/network/on-premises-data-gateways.png")}, c.opts, opts)
 	return diagram.NewNode(nopts...)
